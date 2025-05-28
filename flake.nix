@@ -27,13 +27,27 @@
 			system: let
 				pkgs = nixpkgs.legacyPackages.${system};
 			in {
-				formatter = pkgs.alejandra;
 				packages = {
-					default = (inputs.nvf.lib.neovimConfiguration {
-						inherit pkgs;
-						modules = [ ./versions/default ];
-					}).neovim;
+					default =
+						(inputs.nvf.lib.neovimConfiguration {
+								inherit pkgs;
+								modules = [./versions/default];
+							}).neovim;
+
+					lua =
+						(inputs.nvf.lib.neovimConfiguration {
+								inherit pkgs;
+								modules = [./versions/lua];
+							}).neovim;
+
+					vai =
+						(inputs.nvf.lib.neovimConfiguration {
+								inherit pkgs;
+								modules = [./versions/vai];
+							}).neovim;
 				};
+
+				formatter = pkgs.alejandra;
 			}
 		);
 }

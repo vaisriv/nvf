@@ -10,6 +10,6 @@
 		vimAlias = false;
 		enableLuaLoader = true;
 	};
-	
+
 	# TODO: import lua
 }
