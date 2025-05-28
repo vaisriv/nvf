@@ -5,6 +5,4 @@
 	lib,
 	...
 }: {
-	programs.nvf = {
-	};
 }
