@@ -5,8 +5,6 @@
 	lib,
 	...
 }: {
-	programs.nvf.enable = true;
-
 	imports = [
 		./autocommands.nix
 		./autocomplete.nix
