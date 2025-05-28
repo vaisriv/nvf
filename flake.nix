@@ -31,19 +31,25 @@
 					default =
 						(inputs.nvf.lib.neovimConfiguration {
 								inherit pkgs;
-								modules = [./versions/default];
+								modules = [./versions/minimal];
 							}).neovim;
 
-					lua =
+					minimal =
 						(inputs.nvf.lib.neovimConfiguration {
 								inherit pkgs;
-								modules = [./versions/lua];
+								modules = [./versions/minimal];
 							}).neovim;
 
 					vai =
 						(inputs.nvf.lib.neovimConfiguration {
 								inherit pkgs;
 								modules = [./versions/vai];
+							}).neovim;
+
+					lua =
+						(inputs.nvf.lib.neovimConfiguration {
+								inherit pkgs;
+								modules = [./versions/lua];
 							}).neovim;
 				};
 
